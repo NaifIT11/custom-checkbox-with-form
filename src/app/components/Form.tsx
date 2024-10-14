@@ -8,7 +8,7 @@ export default function Form() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     }
-  return <div className="center p-4 rounded space-y-4">
+  return <div className="center p-4 rounded space-y-4 border">
     <form className="flex gap-4" onSubmit={handleSubmit}>
         <div className="flex gap-2 items-center">
             <Checkbox checked={checked} onCheckedChange={setChecked} />
