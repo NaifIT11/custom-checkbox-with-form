@@ -8,10 +8,14 @@ type CheckboxProps = {
 };
 
 export default function Checkbox({ checked, onCheckedChange }: CheckboxProps) {
+    const handleClick = (e: React.FormEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        onCheckedChange(!checked)
+    }
   return (
     <button
       aria-label="Checkbox Control"
-      onClick={() => onCheckedChange(!checked)}
+      onClick={handleClick}
       role="checkbox"
       aria-checked={checked}
       data-checked={checked}
