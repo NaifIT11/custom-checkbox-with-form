@@ -7,5 +7,5 @@ type CheckboxProps =  {
 }
 
 export default function Checkbox({checked , onCheckedChange}: CheckboxProps){
-    return <button role="checkbox"></button>
+    return <button onClick={() => onCheckedChange(!checked)} role="checkbox" aria-checked={checked}></button>
 }
