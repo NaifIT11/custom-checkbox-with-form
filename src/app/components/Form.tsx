@@ -7,6 +7,9 @@ export default function Form() {
     const [checked , setChecked] = useState<boolean>(false);
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        console.log({
+            acceptTerms: checked
+        })
     }
   return <div className="center p-4 rounded space-y-4 border">
     <form className="flex gap-4 flex-col" onSubmit={handleSubmit}>
