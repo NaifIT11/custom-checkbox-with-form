@@ -14,9 +14,10 @@ export default function Checkbox({ checked, onCheckedChange }: CheckboxProps) {
       onClick={() => onCheckedChange(!checked)}
       role="checkbox"
       aria-checked={checked}
-      className="w-5 h-5 rounded border"
+      data-checked={checked}
+      className="w-5 h-5 rounded border data-[checked=true]:bg-green-300"
     >
-        {checked ? <Check className="w-4 h-4" /> : " "}
+        {checked ? <Check className="w-4 h-4 text-white" /> : ""}
     </button>
   );
 }
